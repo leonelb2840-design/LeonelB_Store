@@ -12,67 +12,69 @@
             text-align: center;
             padding: 20px;
         }
-        .logo { width: 120px; border-radius: 50%; border: 3px solid #00fbff; box-shadow: 0 0 20px #00fbff; }
-        h1 { margin-top: 15px; color: #00fbff; text-transform: uppercase; letter-spacing: 2px; }
+        .logo { width: 120px; border-radius: 50%; border: 3px solid #00fbff; box-shadow: 0 0 20px #00fbff; margin-bottom: 10px; }
+        h1 { margin-top: 15px; color: #00fbff; text-transform: uppercase; letter-spacing: 2px; font-size: 24px; }
         
-        .container { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+        .container { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; max-width: 450px; margin-left: auto; margin-right: auto; }
         
         .btn {
-            padding: 15px;
+            padding: 16px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            border-radius: 12px;
+            border-radius: 15px;
             transition: 0.3s;
             display: block;
-            font-size: 18px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            font-size: 17px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.7);
         }
 
-        /* Colores de los botones */
-        .btn-calc { background: linear-gradient(45deg, #00fbff, #007bff); }
-        .btn-gamer { background: linear-gradient(45deg, #39ff14, #1b8a0a); }
-        .btn-yt { background: linear-gradient(45deg, #ff0000, #990000); }
-        .btn-drive { background: linear-gradient(45deg, #1ea362, #0f7344); }
-        .btn-terabox { background: linear-gradient(45deg, #00a1ff, #0056b3); }
-
-        .btn:active { transform: scale(0.95); opacity: 0.8; }
+        /* Colores Pro LeonelB */
+        .btn-app { background: linear-gradient(45deg, #00fbff, #007bff); } /* Apps */
+        .btn-game { background: linear-gradient(45deg, #39ff14, #1b8a0a); } /* Juegos */
+        .btn-ia { background: linear-gradient(45deg, #ffffff, #555555); color: black; } /* Grok / IA */
+        .btn-yt { background: linear-gradient(45deg, #ff0000, #990000); } /* YouTube */
         
-        .footer { margin-top: 40px; font-size: 12px; color: #555; }
-        .section-title { font-size: 14px; color: #888; text-transform: uppercase; margin-top: 20px; margin-bottom: 10px; font-weight: bold; }
+        .btn:active { transform: scale(0.96); opacity: 0.9; }
+        
+        .section-title { 
+            font-size: 12px; 
+            color: #00fbff; 
+            text-transform: uppercase; 
+            margin-top: 20px; 
+            margin-bottom: 5px; 
+            font-weight: bold;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        .footer { margin-top: 40px; font-size: 11px; color: #444; border-top: 1px solid #111; padding-top: 15px; }
     </style>
 </head>
 <body>
-
-    <img src="logo.png" alt="LeonelB Logo" class="logo">
+    <img src="https://github.com/leonelb2840-design.png" alt="LeonelB Logo" class="logo" onerror="this.src='https://via.placeholder.com/120/00fbff/000000?text=LB2840'">
     
     <h1>LeonelB Store 2.0</h1>
-    <p>El ecosistema oficial de LeonelB2840</p>
+    <p style="color: #888; font-size: 14px;">El búnker digital de LeonelB2840 OFFICIAL 2.0</p>
 
     <div class="container">
-        <p class="section-title">Webs de mis apps:</p>
-        <a href="https://leonelb2840-design.github.io/calculadora-/" class="btn btn-calc">🦁 Abrir Calculadora</a>
-        <a href="https://leonelb2840-design.github.io/Gamer-Hub/" class="btn btn-gamer">🎮 Gamer Hub Minecraft</a>
-        
-        <a href="https://youtube.com/@officialleonelb284?si=AWR80wt7ksBphWCC" class="btn btn-yt">📺 Mi Canal Principal</a>
+        <p class="section-title">🚀 Apps & Herramientas</p>
+        <a href="https://leonelb2840-design.github.io/calculadora-/" class="btn btn-app">🦁 Calculadora Oficial</a>
+        <a href="https://leonelb2840-design.github.io/YTDL-x-Downloader-Leonel-/" class="btn btn-app">📥 YTDL-x Downloader Pro</a>
+        <a href="https://leonelb2840-design.github.io/Gamer-Hub/" class="btn btn-app">🎮 Gamer Hub Minecraft</a>
 
-        <p class="section-title">Descargar Calculadora Oficial:</p>
-        <a href="https://drive.google.com/file/d/13tg9Wd09jz9MNIE-aoYr9HpfBdAv8y2m/view?usp=drivesdk" class="btn btn-drive">📁 Opción Google Drive</a>
-        <a href="https://1024terabox.com/s/1beyoltpIMioGaG59GRz1ig" class="btn btn-terabox">📦 Opción TeraBox</a>
+        <p class="section-title">🕹️ Laboratorio de Juegos</p>
+        <a href="https://leonelb2840-design.github.io/LeonelB-Store__Operation-Rescue/" class="btn btn-game">🐧 Operation Rescue (Pingüino)</a>
+        <a href="https://leonelb2840-design.github.io/Space-Survival___Surviviving-Asteroids-Pro-Leonel/" class="btn btn-game">🚀 Space Survival: Asteroids Pro</a>
 
-        <p class="section-title">Descargar Gamer Hub Oficial:</p>
-        <a href="https://drive.google.com/file/d/10YVe-aHarYL5jexyloEGTL6eeMXrF8r3/view?usp=drivesdk" class="btn btn-drive">📁 Opción Google Drive</a>
-        <a href="https://1024terabox.com/s/1rsxbZhbJOdl9LA3nZ7DcrQ" class="btn btn-terabox">📦 Opción TeraBox</a>
-
-        <p class="section-title">Descargar Store (esta) Oficial:</p>
-        <a href="https://drive.google.com/file/d/12GmfPUk2dTsvRFX2yg-AJd0PFNbZs8A3/view?usp=drivesdk" class="btn btn-drive">📁 Opción Google Drive</a>
-        <a href="https://1024terabox.com/s/14CnfUOoB_uG0VJLD8A_imQ" class="btn btn-terabox">📦 Opción TeraBox</a>
+        <p class="section-title">☠️ Inteligencia Superior (Motores)</p>
+        <a href="https://grok.com" class="btn btn-ia">👑 Grok (El Rey)</a>
+        <p class="section-title">Redes Oficiales</p>
+        <a href="https://youtube.com/@officialleonelb284?si=AWR80wt7ksBphWCC" class="btn btn-yt">📺 Suscríbete al Canal</a>
     </div>
 
     <div class="footer">
-        ©Desarrollado por LeonelB2840 OFFICIAL 2.0® - 2026™
+        © 2026 LeonelB2840 OFFICIAL 2.0 ®<br>
+        Tecnología Independiente | Sin Vencimientos | Caso Cerrado ⚖️
     </div>
-
 </body>
-    </html>
-     
+</html>
