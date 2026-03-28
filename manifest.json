@@ -1,0 +1,20 @@
+{
+  "name": "LeonelB Store",
+  "short_name": "LB Store",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ff00",
+  "icons": [
+    {
+      "src": "icono.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icono_grande.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
