@@ -22,6 +22,22 @@
         }
         h1 { margin-top: 15px; color: #00fbff; text-transform: uppercase; letter-spacing: 2px; font-size: 24px; }
         
+        /* ESTILO BARRA DE BÚSQUEDA */
+        .search-box {
+            width: 90%;
+            max-width: 450px;
+            padding: 12px;
+            margin: 20px auto;
+            border-radius: 25px;
+            border: 1px solid #333;
+            background: #111;
+            color: white;
+            text-align: center;
+            outline: none;
+            transition: 0.3s;
+        }
+        .search-box:focus { border-color: #00fbff; box-shadow: 0 0 10px rgba(0, 251, 255, 0.3); }
+
         .container { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; max-width: 450px; margin-left: auto; margin-right: auto; }
         
         .btn {
@@ -59,6 +75,9 @@
             letter-spacing: 1px;
         }
         .footer { margin-top: 35px; font-size: 11px; color: #666; border-top: 1px solid #222; padding-top: 15px; line-height: 1.6; }
+
+        /* Clase para ocultar elementos */
+        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -67,7 +86,9 @@
     <h1>LeonelB Store 2.0</h1>
     <p style="color: #888; font-size: 13px;">Ecosistema Digital de LeonelB2840 OFFICIAL 2.0</p>
 
-    <div class="container">
+    <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar aplicación o juego..." onkeyup="filterButtons()">
+
+    <div class="container" id="buttonContainer">
         <p class="section-title">🚀 Apps & Herramientas Oficiales</p>
         <a href="https://leonelb2840-design.github.io/Gamer-Hub/" class="btn btn-app">🎮 Gamer Hub (Herramientas Minecraft)</a>
         <a href="https://leonelb2840-design.github.io/calculadora-/" class="btn btn-app">🦁 Calculadora Oficial Leonel</a>
@@ -98,6 +119,30 @@
         Desarrollo Independiente | IA Integrada | Sin Vencimiento<br>
         Mentalidad de Rico | Tecnología Sin Límites
     </div>
+
+    <script>
+        function filterButtons() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const btns = document.getElementsByClassName('btn');
+            const titles = document.getElementsByClassName('section-title');
+
+            // Filtrar botones
+            for (let i = 0; i < btns.length; i++) {
+                const text = btns[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    btns[i].classList.remove('hidden');
+                } else {
+                    btns[i].classList.add('hidden');
+                }
+            }
+
+            // Ocultar títulos de sección si no hay resultados visibles debajo (opcional)
+            if (input === "") {
+                for (let t of titles) t.classList.remove('hidden');
+            } else {
+                for (let t of titles) t.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
-
