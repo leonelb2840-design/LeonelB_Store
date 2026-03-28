@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeonelB2840 Store Official 2.0</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#050505">
+    <link rel="apple-touch-icon" href="https://github.com/leonelb2840-design.png">
+
     <style>
         body {
             background-color: #050505;
@@ -121,27 +126,31 @@
     </div>
 
     <script>
+        // FILTRADO DE BÚSQUEDA
         function filterButtons() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const btns = document.getElementsByClassName('btn');
             const titles = document.getElementsByClassName('section-title');
 
-            // Filtrar botones
             for (let i = 0; i < btns.length; i++) {
                 const text = btns[i].innerText.toLowerCase();
-                if (text.includes(input)) {
-                    btns[i].classList.remove('hidden');
-                } else {
-                    btns[i].classList.add('hidden');
-                }
+                btns[i].classList.toggle('hidden', !text.includes(input));
             }
 
-            // Ocultar títulos de sección si no hay resultados visibles debajo (opcional)
             if (input === "") {
                 for (let t of titles) t.classList.remove('hidden');
             } else {
                 for (let t of titles) t.classList.add('hidden');
             }
+        }
+
+        // REGISTRO DEL SERVICE WORKER (Para modo Offline)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('LeonelB Store: Activa para uso Offline', reg))
+                .catch(err => console.log('Error de Registro', err));
+            });
         }
     </script>
 </body>
