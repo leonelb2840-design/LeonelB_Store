@@ -5,7 +5,7 @@ const CACHE_NAME = 'LeonelB_Store-v1.5';
 const INITIAL_ASSETS = [
   './',
   './index.html',
-  './icon-app.png' // Si usas un logo diferente, cámbiale el nombre aquí
+  './icono.png' // Si usas un logo diferente, cámbiale el nombre aquí
 ];
 
 // --- FASE DE INSTALACIÓN ---
