@@ -27,7 +27,6 @@
         }
         h1 { margin-top: 15px; color: #00fbff; text-transform: uppercase; letter-spacing: 2px; font-size: 24px; }
         
-        /* ESTILO BARRA DE BÚSQUEDA */
         .search-box {
             width: 90%;
             max-width: 450px;
@@ -57,8 +56,9 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.7);
         }
 
-        /* Colores Pro LeonelB */
+        /* Paleta LeonelB 2026 */
         .btn-app { background: linear-gradient(45deg, #00fbff, #007bff); } 
+        .btn-store { background: linear-gradient(45deg, #6a11cb, #2575fc); } /* Estilo para Tiendas */
         .btn-huawei { background: linear-gradient(45deg, #ff0000, #ff4d4d); } 
         .btn-game { background: linear-gradient(45deg, #39ff14, #1b8a0a); } 
         .btn-stickman { background: linear-gradient(45deg, #444444, #111111); border: 1px solid #666; } 
@@ -80,8 +80,6 @@
             letter-spacing: 1px;
         }
         .footer { margin-top: 35px; font-size: 11px; color: #666; border-top: 1px solid #222; padding-top: 15px; line-height: 1.6; }
-
-        /* Clase para ocultar elementos */
         .hidden { display: none; }
     </style>
 </head>
@@ -94,11 +92,16 @@
     <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar aplicación o juego..." onkeyup="filterButtons()">
 
     <div class="container" id="buttonContainer">
+        
+        <p class="section-title">🏬 Tiendas & Distribución</p>
+        <a href="https://leonelb2840-design.github.io/LeonelB_Store/" class="btn btn-store">🏛️ Mi Tienda (LeonelB Store Original)</a>
+        <a href="https://drive.google.com/file/d/1XdNdGblNWlmKBooXqU67RKaR6DMPHTXF/view?usp=drivesdk" class="btn btn-huawei">🔴 Huawei AppGallery (Official)</a>
+        <a href="https://drive.google.com/file/d/1zS3l8Z5u0k5ibmGlMg9QPRG_DdzfLKSv/view?usp=drivesdk" class="btn btn-store">🌴 Palm Store (Official APK)</a>
+
         <p class="section-title">🚀 Apps & Herramientas Oficiales</p>
-        <a href="https://leonelb2840-design.github.io/Gamer-Hub/" class="btn btn-app">🎮 Gamer Hub (Herramientas de algunos Juegos)</a>
+        <a href="https://leonelb2840-design.github.io/Gamer-Hub/" class="btn btn-app">🎮 Gamer Hub (Central de Juegos)</a>
         <a href="https://leonelb2840-design.github.io/Scientific-Calculator-Lion/" class="btn btn-app">🦁 Calculadora Oficial Leonel</a>
         <a href="https://leonelb2840-design.github.io/YTDL-x-Downloader-Leonel-/" class="btn btn-app">📥 YTDL-x Downloader Pro</a>
-        <a href="https://drive.google.com/file/d/1XdNdGblNWlmKBooXqU67RKaR6DMPHTXF/view?usp=drivesdk" class="btn btn-huawei">🔴 Huawei AppGallery (Official APK)</a>
         <a href="https://leonelb2840-design.github.io/Nokia-T9-Traductor-Master/" class="btn btn-app">📟 Nokia T9 Traductor Master</a>
         <a href="https://leonelb2840-design.github.io/Trucos-GTA-Leonel/" class="btn btn-app">💣 Trucos GTA Oficial</a>
 
@@ -126,7 +129,6 @@
     </div>
 
     <script>
-        // FILTRADO DE BÚSQUEDA
         function filterButtons() {
             const input = document.getElementById('searchInput').value.toLowerCase();
             const btns = document.getElementsByClassName('btn');
@@ -144,7 +146,6 @@
             }
         }
 
-        // REGISTRO DEL SERVICE WORKER (Para modo Offline)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw.js')
