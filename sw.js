@@ -1,5 +1,5 @@
 // 1. Identificador de la versión para la Store
-const CACHE_NAME = 'LeonelB-Store-v1.5';
+const CACHE_NAME = 'LeonelB_Store-v1.5';
 
 // 2. Archivos Vitales (Asegúrate de que los nombres coincidan en tu repo)
 const INITIAL_ASSETS = [
