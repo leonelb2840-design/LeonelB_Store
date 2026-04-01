@@ -29,7 +29,7 @@ Desde esta Store tienes acceso directo a las "Llaves de la Bóveda":
 ---
 
 ## 🛠️ Instalación
-1.  Entra al [Link del Sitio](https://leonelb2840-design.github.io/LeonelB-Store_2.0/).
+1.  Entra al [Link del Sitio](https://leonelb2840-design.github.io/LeonelB_Store/).
 2.  Espera a que aparezca el mensaje de **"Añadir a la pantalla de inicio"**.
 3.  ¡Listo! Ya tienes la Store como una app nativa en tu Android.
 
