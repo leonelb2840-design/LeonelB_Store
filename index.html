@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeonelB2840 Store Official 2.0</title>
-    
+
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#050505">
     <link rel="apple-touch-icon" href="https://github.com/leonelb2840-design.png">
@@ -26,7 +26,7 @@
             background-color: #111;
         }
         h1 { margin-top: 15px; color: #00fbff; text-transform: uppercase; letter-spacing: 2px; font-size: 24px; }
-        
+
         .search-box {
             width: 90%;
             max-width: 450px;
@@ -43,7 +43,7 @@
         .search-box:focus { border-color: #00fbff; box-shadow: 0 0 10px rgba(0, 251, 255, 0.3); }
 
         .container { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; max-width: 450px; margin-left: auto; margin-right: auto; }
-        
+
         .btn {
             padding: 15px;
             text-decoration: none;
@@ -66,9 +66,23 @@
         .btn-ia-bing { background: linear-gradient(45deg, #00a1f1, #0078d4); } 
         .btn-ia-gemini { background: linear-gradient(45deg, #4285f4, #9b72cb); } 
         .btn-yt { background: linear-gradient(45deg, #ff0000, #990000); } 
-        
+
+        /* Discord button styles */
+        .btn-discord { background: linear-gradient(45deg, #5865F2, #4752C4); }
+        .btn-discord-bot { background: linear-gradient(45deg, #5865F2, #EB459E); position: relative; overflow: hidden; }
+        .btn-discord-bot::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn-discord-bot:hover::after { left: 100%; }
+        .btn-discord-server { background: linear-gradient(45deg, #2D2D3A, #5865F2); border: 1px solid #5865F2; }
+        .btn-discord-support { background: linear-gradient(45deg, #1a1a2e, #EB459E); border: 1px solid #EB459E; }
+
         .btn:active { transform: scale(0.96); }
-        
+
         .section-title { 
             font-size: 11px; 
             color: #00fbff; 
@@ -84,14 +98,14 @@
 </head>
 <body>
     <img src="https://github.com/leonelb2840-design.png" alt="LeonelB Profile Logo" class="logo">
-    
+
     <h1>LeonelB Store 2.0</h1>
     <p style="color: #888; font-size: 13px;">Ecosistema Digital de LeonelB2840 OFFICIAL 2.0</p>
 
     <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar aplicación o juego..." onkeyup="filterButtons()">
 
     <div class="container" id="buttonContainer">
-        
+
         <p class="section-title">🏬 Tiendas & Distribución</p>
         <a href="https://github.com/leonelb2840-design/LeonelB_Store/releases/tag/V2.1.0" class="btn btn-store">🏛️ Mi Tienda (LeonelB Store Original)</a>
         <a href="https://drive.google.com/file/d/1XdNdGblNWlmKBooXqU67RKaR6DMPHTXF/view?usp=drivesdk" class="btn btn-huawei">🔴 Huawei AppGallery (Official)</a>
@@ -106,7 +120,7 @@
         <a href="https://leonelb2840-design.github.io/Trucos-GTA-Leonel/" class="btn btn-app">💣 Trucos GTA Oficial</a>
 
         <p class="section-title">🕹️ Laboratorio de Juegos</p>
-        <a href="https://leonelb2840-design.github.io/Space-Survival___Surviviving-Asteroids-Pro-Leonel/" class="btn btn-game">🚀 Space Survival Pro (by Grok)</a>
+        <a href="https://leonelb2840-design.github.io/Space-Survival___Survivorting-Asteroids-Pro-Leonel/" class="btn btn-game">🚀 Space Survival Pro (by Grok)</a>
         <a href="https://leonelb2840-design.github.io/LeonelB-Store__Operation-Rescue/" class="btn btn-game">🐧 Operation Rescue</a>
 
         <p class="section-title">⚔️ Juego Invitado</p>
@@ -117,7 +131,14 @@
         <a href="https://x.com/i/grok" class="btn btn-ia-x">☠️ Grok en X (El Rey)</a>
         <a href="https://www.bing.com/" class="btn btn-ia-bing">🔵 Bing / Copilot</a>
         <a href="https://gemini.google.com" class="btn btn-ia-gemini">🛰️ Gemini (Arquitecto)</a>
-        
+
+        <!-- CATEGORÍA DISCORD -->
+        <p class="section-title">💬 Discord & Bots</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1496299101019701368&permissions=8&scope=bot%20applications.commands" class="btn btn-discord-bot" target="_blank" rel="noopener noreferrer">🤖 RIKA Bot — Añadir a tu Servidor</a>
+        <a href="https://discord.gg/PvEgbSG6DK" class="btn btn-discord-server" target="_blank" rel="noopener noreferrer">🌐 Community Creative — Mi Servidor</a>
+        <a href="https://discord.gg/KdjN5FQPCd" class="btn btn-discord-support" target="_blank" rel="noopener noreferrer">🛠️ RIKA Support Server</a>
+        <a href="https://discord.com" class="btn btn-discord" target="_blank" rel="noopener noreferrer">💜 Discord Oficial</a>
+
         <p class="section-title">Redes Oficiales</p>
         <a href="https://youtube.com/@official-leonelb?si=xhS22qjWrCE7KsVF" class="btn btn-yt">📺 Suscríbete: Official LeonelB</a>
     </div>
@@ -155,4 +176,4 @@
         }
     </script>
 </body>
-</html>
+            </html>
